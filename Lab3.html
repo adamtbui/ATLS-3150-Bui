@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<h1>forms and table</h1>
+		</header>
+		<section>
+			<h2>the table</h2>
+			<table>
+				<caption>
+					Table
+				</caption>
+				<thead>
+					<th scope="col"></th>
+				</thead>
+				<tr>
+					<td>data</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h2>forms</h2>
+			<form action="" method="post" id="testform">
+				<fieldset>
+					<legend>information</legend>
+					<label for="name"
+						>Whats name? *
+						<input type="text" id="name" required />
+					</label>
+					<label for="email"
+						>Whats email? *
+						<input type="email" id="email" required />
+					</label>
+					<label for="phone"
+						>Whats phone?
+						<input type="tel" id="phone" minlength="10" />
+					</label>
+					<label for="age"
+						>Whats age?
+						<input type="number" id="age" />
+					</label>
+					<label for="password"
+						>Whats age?
+						<input type="password" id="password" maxlength="20" minlength="5" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*" required />
+						<ul class="inputRequirements">
+							<li>must be at least 5 char, contatin uppercase, lowercase, numbers, and symbols</li>
+						</ul>
+					</label>
+					<button type="submit">Submit</button>
+				</fieldset>
+			</form>
+		</section>
+	</body>
+</html>

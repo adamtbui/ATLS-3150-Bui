@@ -1,98 +1,159 @@
 blockquote {
-    margin: 0 1rem 1rem;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
-    line-height: 2rem;
-    font-style: italic;
+	margin: 0 1rem 1rem;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial;
+	line-height: 2rem;
+	font-style: italic;
 }
 
 .sr-only {
-    border: 0;
-    clip: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+	border: 0;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
 }
 
 h1,
 h2,
 h3 {
-    font-family: serif;
+	font-family: serif;
 }
 
 p {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-        sans-serif;
-    line-height: 2rem;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+	line-height: 2rem;
 }
 
 body {
-    background: #fcebd8;
-    padding: 1rem;
+	background: #fcebd8;
+	padding: 1rem;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+}
+
+.wrapper {
+	margin-left: 1%;
 }
 
 /* The sidebar menu  https://www.w3schools.com/howto/howto_css_fixed_sidebar.asp*/
 .sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: #fcebd8; /* Black */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
+	width: 200px; /* Set the width of the sidebar */
+	position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+	z-index: 1; /* Stay on top */
+	top: 0; /* Stay at the top */
+	left: 0;
+	background-color: #fcebd8; /* Black */
+	overflow-x: hidden; /* Disable horizontal scroll */
+	padding-top: 20px;
 }
 
 /* The navigation menu links */
 .sidenav a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    color: black;
-    display: block;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 25px;
+	color: black;
+	display: block;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: white;
+	color: white;
 }
 
 /* Style page content */
 .main {
-    margin-left: 160px; /* Same as the width of the sidebar */
-    padding: 0px 10px;
+	margin-left: 160px; /* Same as the width of the sidebar */
+	padding: 0px 10px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
+	.sidenav {
+		padding-top: 15px;
+	}
+	.sidenav a {
+		font-size: 18px;
+	}
 }
 
 .img-right {
-    float: right;
-    margin: 5px;
-    padding-left: 10px;
+	float: right;
+	margin: 5px;
+	padding-left: 10px;
 }
 
 .img-left {
-    float: left;
-    margin: 5px;
-    padding-right: 10px;
+	float: left;
+	margin: 5px;
+	padding-right: 10px;
 }
 
 #main-nav {
-    padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 
 #main-header {
-    padding-top: 2rem;
+	padding-top: 2rem;
+}
+
+table,
+th,
+td {
+	border-collapse: collapse;
+}
+
+table {
+	margin-bottom: 30px;
+}
+
+td {
+	border: 2px solid red;
+	text-align: center;
+	width: 70px;
+}
+
+input:focus {
+	background: black;
+	color: white;
+	border: 4px solid yellow;
+}
+input:valid {
+	border: 2px solid green;
+}
+
+input:invalid {
+	border: 1px dotted red;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/*will target any field that is not submit and is valid*/
+input:not([type="submit"]):valid {
+	border-color: #3d9ca8;
+	box-shadow: 0 0 3px #3d9ca8;
+}
+
+/* Hide and show list of inputRequirements when interacting with input */
+input:not([type="submit"]) + .inputRequirements {
+	overflow: hidden;
+	max-height: 0;
+	transition: max-height 1s ease-out;
+}
+
+input:not([type="submit"]):hover + .inputRequirements,
+input:not([type="submit"]):focus + .inputRequirements,
+input:not([type="submit"]):active + .inputRequirements {
+	max-height: 1000px; /* any large number (bigger then the .inputRequirements list) */
+	transition: max-height 1s ease-in;
 }
