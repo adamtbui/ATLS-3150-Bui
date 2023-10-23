@@ -67,16 +67,20 @@ h2,
 h3,
 th,
 legend {
-    font-family: serif;
+    font-family: "Roboto Mono", serif;
 }
 
 p,
 li,
 td,
 label {
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
-        sans-serif;
+    font-family: "Roboto Mono", Arial, sans-serif;
     line-height: 2rem;
+}
+
+caption {
+    font-family: "Roboto Mono", Arial, sans-serif;
+    font-style: italic;
 }
 
 .main {
