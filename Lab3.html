@@ -1,59 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<body>
-		<header>
-			<h1>forms and table</h1>
-		</header>
-		<section>
-			<h2>the table</h2>
-			<table>
-				<caption>
-					Table
-				</caption>
-				<thead>
-					<th scope="col"></th>
-				</thead>
-				<tr>
-					<td>data</td>
-				</tr>
-			</table>
-		</section>
-		<section>
-			<h2>forms</h2>
-			<form action="" method="post" id="testform">
-				<fieldset>
-					<legend>information</legend>
-					<label for="name"
-						>Whats name? *
-						<input type="text" id="name" required />
-					</label>
-					<label for="email"
-						>Whats email? *
-						<input type="email" id="email" required />
-					</label>
-					<label for="phone"
-						>Whats phone?
-						<input type="tel" id="phone" minlength="10" />
-					</label>
-					<label for="age"
-						>Whats age?
-						<input type="number" id="age" />
-					</label>
-					<label for="password"
-						>Whats age?
-						<input type="password" id="password" maxlength="20" minlength="5" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*" required />
-						<ul class="inputRequirements">
-							<li>must be at least 5 char, contatin uppercase, lowercase, numbers, and symbols</li>
-						</ul>
-					</label>
-					<button type="submit">Submit</button>
-				</fieldset>
-			</form>
-		</section>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lab 3</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"
+        ></script>
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+
+        <link rel="stylesheet" href="./lab3styles.css" />
+    </head>
+    <body>
+        <main>
+            <div class="wrapper">
+                <div class="container">
+                    <header id="main-header">
+                        <h1>Forms and Tables</h1>
+                    </header>
+                    <div id="main-nav">
+                        <h2 class="sr-only">Main Navigation</h2>
+                        <nav class="navbar navbar-expand-lg bg-body-secondary">
+                            <div class="container-fluid">
+                                <span class="navbar-brand mb-0 h1">ATLS 3150</span>
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./Lab2.html">Lab 2</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" href="./Lab3.html">Lab 3</a>
+                                    </li>
+                                </ul>
+                                <div class="dropdown">
+                                    <a
+                                        class="btn btn-secondary dropdown-toggle"
+                                        href="#"
+                                        role="button"
+                                        id="dropdownMenuLink"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        Skip to main content
+                                    </a>
+
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li>
+                                            <a class="dropdown-item" href="#Accessible_Tables"
+                                                >Tables</a
+                                            >
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#Accessible_Forms"
+                                                >Forms</a
+                                            >
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="container">
+                    <section id="Accessible_Tables">
+                        <h2>Accessible Tables</h2>
+                        <table class="table table-light table-striped-columns">
+                            <caption class="caption-top">
+                                Running Back Stats For 2023 Football Season
+                            </caption>
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Rank</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Team</th>
+                                    <th scope="col">Games</th>
+                                    <th scope="col">Rushing Yards</th>
+                                    <th scope="col">Touchdowns</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Christian McCaffrey</td>
+                                    <td><abbr title="San Francisco 49ers">SF</abbr></td>
+                                    <td>6</td>
+                                    <td>553</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Raheem Mostert</td>
+                                    <td><abbr title="Miami Dolphins">MIA</abbr></td>
+                                    <td>6</td>
+                                    <td>429</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Travis Etienne Jr.</td>
+                                    <td><abbr title="Jacksonville Jaguars">JAX</abbr></td>
+                                    <td>7</td>
+                                    <td>504</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Kyren Williams.</td>
+                                    <td><abbr title="Los Angeles Rams">LAR</abbr></td>
+                                    <td>6</td>
+                                    <td>456</td>
+                                    <td>6</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Zack Moss</td>
+                                    <td><abbr title="Indiana Colts">IND</abbr></td>
+                                    <td>6</td>
+                                    <td>523</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>De'Von Achane</td>
+                                    <td><abbr title="Miami Dolphins">MIA</abbr></td>
+                                    <td>4</td>
+                                    <td>460</td>
+                                    <td>5</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                    <section id="Accessible_Forms">
+                        <h2>Accessible Forms</h2>
+                        <form action="" method="post" id="testform">
+                            <fieldset class="form-group mb-3">
+                                <legend>User Information</legend>
+                                <label for="name"
+                                    >Username: *
+                                    <input type="text" id="name" required />
+                                    <span
+                                        aria-hidden="true"
+                                        class="material-symbols-outlined checkIcon"
+                                        >done</span
+                                    >
+                                </label>
+                                <label for="email"
+                                    >User email: *
+                                    <input type="email" id="email" required />
+                                    <span
+                                        aria-hidden="true"
+                                        class="material-symbols-outlined checkIcon"
+                                        >done</span
+                                    >
+                                </label>
+                                <label for="phone"
+                                    >User phone number:
+                                    <input type="tel" id="phone" minlength="10" />
+                                </label>
+                                <label for="age"
+                                    >User age:
+                                    <input type="number" id="age" />
+                                </label>
+                                <label for="password"
+                                    >User's Password: *
+                                    <input
+                                        type="password"
+                                        id="password"
+                                        maxlength="20"
+                                        minlength="5"
+                                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+!=]).*"
+                                        required
+                                    />
+                                    <span
+                                        aria-hidden="true"
+                                        class="material-symbols-outlined checkIcon"
+                                        >done</span
+                                    >
+                                    <ul class="inputRequirements">
+                                        <li>
+                                            must be at least 5 char, contain uppercase, lowercase,
+                                            numbers, and symbols
+                                        </li>
+                                    </ul>
+                                </label>
+                            </fieldset>
+                            <hr />
+                            <fieldset>
+                                <legend>Additional User Information</legend>
+                                <label for="location"
+                                    >User Location:
+                                    <input type="text" id="location" />
+                                </label>
+                                <label for="height"
+                                    >User Height (in feet):
+                                    <input type="number" id="height" />
+                                </label>
+                                <label for="weight"
+                                    >User Weight (pounds):
+                                    <input type="number" id="weight" />
+                                </label>
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
