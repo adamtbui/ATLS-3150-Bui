@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+body {
+    font-family: "Roboto Mono", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 2rem;
+    color: black;
+}
+
+h1,
+h2,
+h3,
+th,
+legend {
+    font-family: "Roboto Mono", serif;
+}
+
+p {
+    margin: 1.8em 0;
+}
+
+header,
+nav,
+main,
+aside,
+footer {
+    padding: 1em;
+    border: 1px black dashed;
+}
+
+section {
+    text-align: center;
+}
+
+header,
+footer {
+    text-align: center;
+}
+
+.navlist {
+    width: fit-content;
+    margin-left: auto;
+}
+
+.gridbox {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: 0.1fr 0.1fr 1fr;
+    grid-template-areas:
+        "heading     heading     heading"
+        "navbar     navbar     navbar"
+        "profilepicture    maincontent     maincontent"
+        "profilepicture    maincontent     maincontent";
+}
+
+header {
+    grid-area: heading;
+    background-color: #f6f6ff;
+}
+nav {
+    grid-area: navbar;
+    background-color: #f6f6ff;
+}
+main {
+    grid-area: maincontent;
+    max-height: 100%;
+    background-color: #fff8f5;
+    height: fit-content;
+}
+#profilepicture {
+    grid-area: profilepicture;
+}
+
+@media screen and (min-width: 641px) and (max-width: 991px) {
+    nav span {
+        display: none;
+        visibility: hidden;
+    }
+    .gridbox {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "heading heading"
+            "navbar navbar"
+            "maincontent maincontent";
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .gridbox {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "heading"
+            "navbar"
+            "maincontent";
+    }
+    nav span {
+        display: none;
+        visibility: hidden;
+    }
+    nav ul {
+        display: inline-block !important;
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    nav ul li a {
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px black solid;
+        background: white;
+    }
+}
