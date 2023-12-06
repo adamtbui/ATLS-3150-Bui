@@ -46,7 +46,7 @@ main,
 aside,
 footer {
     padding: 1em;
-    border: 1px black dashed;
+    border: 1px black;
 }
 
 section {
@@ -104,13 +104,19 @@ footer {
 #imgLeft {
     grid-area: imgleft;
     margin-left: auto;
+    width: 50vw;
+    height: 50vh;
+    max-width: 100%;
 }
 
 #imgRight {
     grid-area: imgright;
+    width: 50vw;
+    height: 50vh;
+    max-width: 100%;
 }
 
-@media screen and (min-width: 641px) and (max-width: 991px) {
+@media screen and (min-width: 1041px) and (max-width: 1515px) {
     nav span {
         display: none;
         visibility: hidden;
@@ -126,15 +132,13 @@ footer {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1040px) {
     .gridbox {
         grid-template-columns: 1fr;
         grid-template-areas:
             "heading"
             "navbar"
-            "maincontent"
-            "imgleft"
-            "imgright"
+            "imgleft maincontent imgright"
             "footer";
     }
     nav span {
