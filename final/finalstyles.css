@@ -26,6 +26,7 @@ body {
     font-size: 15px;
     line-height: 2rem;
     color: black;
+    background-color: #d9d6d2;
 }
 
 h1,
@@ -58,6 +59,10 @@ footer {
     text-align: center;
 }
 
+figcaption {
+    margin: 1vh;
+}
+
 .navlist {
     width: fit-content;
     margin-left: auto;
@@ -81,38 +86,41 @@ footer {
 
 header {
     grid-area: heading;
-    background-color: #f6f6ff;
+    background-color: #e5b6f2;
 }
 nav {
     grid-area: navbar;
-    background-color: #f6f6ff;
+    background-color: #b6c5f2;
 }
 main {
     grid-area: maincontent;
     max-height: 100%;
     width: 75%;
     margin: auto;
-    background-color: #fff8f5;
+    background-color: #b6f2d0;
     height: fit-content;
 }
-footer {
-    grid-area: footer;
-    max-height: 100%;
-    height: fit-content;
-    background-color: #fff8f5;
-}
+
 #imgLeft {
+    text-align: center;
     grid-area: imgleft;
+    background-color: #f2e3b6;
+}
+
+#imgLeft img {
     margin-left: auto;
     width: 50vw;
-    height: 50vh;
     max-width: 100%;
 }
 
 #imgRight {
+    text-align: center;
     grid-area: imgright;
+    background-color: #f2e3b6;
+}
+
+#imgRight img {
     width: 50vw;
-    height: 50vh;
     max-width: 100%;
 }
 
@@ -127,8 +135,8 @@ footer {
             "heading heading"
             "navbar navbar"
             "maincontent maincontent"
-            "imgleft imgright"
-            "footer footer";
+            "imgleft imgleft"
+            "imgright imgright";
     }
 }
 
@@ -138,8 +146,9 @@ footer {
         grid-template-areas:
             "heading"
             "navbar"
-            "imgleft maincontent imgright"
-            "footer";
+            "maincontent"
+            "imgleft"
+            "imgright";
     }
     nav span {
         display: none;

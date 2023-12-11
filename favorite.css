@@ -26,7 +26,6 @@ body {
     font-size: 15px;
     line-height: 2rem;
     color: black;
-    background-color: #d9d6d2;
 }
 
 h1,
@@ -47,6 +46,7 @@ main,
 aside,
 footer {
     padding: 1em;
+    border: 1px black dashed;
 }
 
 section {
@@ -74,30 +74,28 @@ footer {
     grid-template-areas:
         "heading     heading     heading"
         "navbar     navbar     navbar"
-        "asideLeft    maincontent     maincontent"
-        "asideLeft    maincontent     maincontent";
+        "profilepicture    maincontent     maincontent"
+        "profilepicture    maincontent     maincontent";
 }
 
 header {
     grid-area: heading;
-    background-color: #e5b6f2;
+    background-color: #f6f6ff;
 }
 nav {
     grid-area: navbar;
-    background-color: #b6c5f2;
+    background-color: #f6f6ff;
 }
 main {
     grid-area: maincontent;
     max-height: 100%;
-    width: 100%;
-    overflow: auto;
-    background-color: #b6f2d0;
+    background-color: #fff8f5;
+    height: fit-content;
 }
-
-#asideLeft {
-    text-align: center;
-    grid-area: asideLeft;
-    background-color: #f2e3b6;
+#profilepicture {
+    width: 30vw;
+    background-color: #f6f6ff;
+    grid-area: profilepicture;
 }
 
 @media screen and (min-width: 641px) and (max-width: 991px) {
@@ -110,8 +108,7 @@ main {
         grid-template-areas:
             "heading heading"
             "navbar navbar"
-            "maincontent maincontent"
-            "asideLeft asideLeft";
+            "maincontent maincontent";
     }
 }
 
@@ -121,8 +118,7 @@ main {
         grid-template-areas:
             "heading"
             "navbar"
-            "maincontent"
-            "imgright";
+            "maincontent";
     }
     nav span {
         display: none;

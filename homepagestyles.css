@@ -92,7 +92,9 @@ main {
     background-color: #fff8f5;
     height: fit-content;
 }
+
 #profilepicture {
+    width: 15vw;
     grid-area: profilepicture;
 }
 
