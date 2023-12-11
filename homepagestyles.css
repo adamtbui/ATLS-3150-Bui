@@ -91,6 +91,7 @@ main {
     max-height: 100%;
     background-color: #fff8f5;
     height: fit-content;
+    overflow: auto;
 }
 
 #profilepicture {
